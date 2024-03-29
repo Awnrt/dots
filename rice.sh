@@ -6,14 +6,27 @@ cp -r nvim /home/$USER/.config
 cp -r waybar /home/$USER/.config
 cp -r wofi /home/$USER/.config
 cp -r .papes /home/$USER
-#sudo cp -r Adwaita-dark /usr/share/themes
-sudo cp -r themes/Dracula-theme /usr/share/themes/Dracula
-sudo cp -r themes/Dracula-icons /usr/share/icons/Dracula
-
 
 DEPLIST="`sed -e 's/#.*$//' -e '/^$/d' dependencies.txt | tr '\n' ' '`"
 
 sudo pacman -Sq $DEPLIST --noconfirm
+
+wget https://github.com/dracula/gtk/archive/master.zip
+unzip master.zip
+
+wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
+unzip Dracula.zip
+
+wget https://github.com/dracula/gtk/releases/download/v4.0.0/Dracula-cursors.tar.xz
+tar -xf Dracula-cursors.tar.xz 
+
+mkdir .local
+mkdir .local/share
+mkdir .local/share/themes
+mkdir .local/share/icons
+mv gtk-master .local/share/themes
+mv Dracula .local/share/icons
+mv Dracula-cursors .local/share/icons
 
 echo "options hid_apple fnmode=0" > /etc/modprobe.d/hid_apple.conf 
 echo "options nvidia NVreg_RegistryDwords=\"PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3\"" > /etc/modprobe.d/nvidia.conf
@@ -45,7 +58,10 @@ sudo echo "min_freq='4.8GHz'" >> /etc/default/cpupower
 gsettings set org.gnome.desktop.interface font-name 'JetBrainsMonoNL NF Bold Mono 11'
 gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMonoNL NF Bold Mono 11'
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+gsettings set org.gnome.desktop.interface cursor-theme "Dracula-cursors"
 
 sudo mkinitcpio -P
+
 chsh -s $(which fish)

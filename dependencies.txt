@@ -1,1 +1,1 @@
-neofetch neovim hyprland kitty git waybar wofi hyprpaper ntfs-3g wget pipewire pipewire-alsa pipewire-pulse obs-studio qt6-base qt6-wayland grim feh xdg-desktop-portal-hyprland openssh wl-clipboard fish ttf-jetbrains-mono-nerd firefox cpupower
+neofetch neovim hyprland kitty git waybar wofi hyprpaper ntfs-3g wget pipewire pipewire-alsa pipewire-pulse obs-studio qt6-base qt6-wayland grim feh xdg-desktop-portal-hyprland openssh wl-clipboard fish ttf-jetbrains-mono-nerd firefox cpupower unzip
