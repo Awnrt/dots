@@ -1,7 +1,3 @@
-DEPLIST="`sed -e 's/#.*$//' -e '/^$/d' dependencies.txt | tr '\n' ' '`"
-
-sudo pacman -Sq $DEPLIST --noconfirm
-
 mkdir /home/$USER/.config
 cp -r fish /home/$USER/.config
 cp -r hypr /home/$USER/.config
@@ -11,6 +7,10 @@ cp -r waybar /home/$USER/.config
 cp -r wofi /home/$USER/.config
 cp -r .papes /home/$USER
 sudo cp -r Adwaita-dark /usr/share/themes
+
+DEPLIST="`sed -e 's/#.*$//' -e '/^$/d' dependencies.txt | tr '\n' ' '`"
+
+sudo pacman -Sq $DEPLIST --noconfirm
 
 echo "options hid_apple fnmode=0" > /etc/modprobe.d/hid_apple.conf 
 echo "options nvidia NVreg_RegistryDwords=\"PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3\"" > /etc/modprobe.d/nvidia.conf
