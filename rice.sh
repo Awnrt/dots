@@ -20,10 +20,10 @@ unzip Dracula.zip
 wget https://github.com/dracula/gtk/releases/download/v4.0.0/Dracula-cursors.tar.xz
 tar -xf Dracula-cursors.tar.xz 
 
-mkdir .local
-mkdir .local/share
-mkdir .local/share/themes
-mkdir .local/share/icons
+mkdir /home/$USER/.local
+mkdir /home/$USER/.local/share
+mkdir /home/$USER/.local/share/themes
+mkdir /home/$USER/.local/share/icons
 mv gtk-master .local/share/themes
 mv Dracula .local/share/icons
 mv Dracula-cursors .local/share/icons
