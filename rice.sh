@@ -6,7 +6,10 @@ cp -r nvim /home/$USER/.config
 cp -r waybar /home/$USER/.config
 cp -r wofi /home/$USER/.config
 cp -r .papes /home/$USER
-sudo cp -r Adwaita-dark /usr/share/themes
+#sudo cp -r Adwaita-dark /usr/share/themes
+sudo cp -r themes/Dracula-theme /usr/share/themes/Dracula
+sudo cp -r themes/Dracula-icons /usr/share/icons/Dracula
+
 
 DEPLIST="`sed -e 's/#.*$//' -e '/^$/d' dependencies.txt | tr '\n' ' '`"
 
@@ -41,8 +44,8 @@ sudo echo "min_freq='4.8GHz'" >> /etc/default/cpupower
 
 gsettings set org.gnome.desktop.interface font-name 'JetBrainsMonoNL NF Bold Mono 11'
 gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMonoNL NF Bold Mono 11'
-gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.interface icon-theme "Dracula"
 
 sudo mkinitcpio -P
 chsh -s $(which fish)
