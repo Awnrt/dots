@@ -24,9 +24,9 @@ mkdir /home/$USER/.local
 mkdir /home/$USER/.local/share
 mkdir /home/$USER/.local/share/themes
 mkdir /home/$USER/.local/share/icons
-mv gtk-master .local/share/themes
-mv Dracula .local/share/icons
-mv Dracula-cursors .local/share/icons
+cp -r gtk-master .local/share/themes/Dracula
+cp -r Dracula .local/share/icons
+cp -r Dracula-cursors .local/share/icons
 
 echo "options hid_apple fnmode=0" > /etc/modprobe.d/hid_apple.conf 
 echo "options nvidia NVreg_RegistryDwords=\"PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3\"" > /etc/modprobe.d/nvidia.conf
