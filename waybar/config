@@ -110,7 +110,7 @@
     },
     "cpu": {
         "interval": 10,
-	"format": "CPU {usage}%",       
+	"format": "CPU {usage}%   ",       
 	//"format": "  {usage}%",
 	"tooltip": false,
 	"spacing": 0

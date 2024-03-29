@@ -20,19 +20,19 @@ tooltip {
     border-color: #11111b;
 }
 
-#workspaces button {
+#workspaces button { 
     padding: 5px;
-    color: #a6adc8;
+    color: #828282;
     margin-right: 5px;
 }
 
 #workspaces button.active {
-    color: #f6f6f6;
+    color: #383838;
 }
 
 #workspaces button.focused {
     color: #f6f6f6;
-    background: #a6adc8;
+    /*background: #a6adc8;*/
     border-radius: 10px;
 }
 
@@ -43,7 +43,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: #a6adc8;
+    /*background: #a6adc8;*/
     color: #cdd6f4;
     border-radius: 10px;
 }
@@ -54,8 +54,7 @@ tooltip {
 #custom-weather,
 #window,
 #clock,
-#cpu,
-#memory,
+#hardware,
 #temperature,
 #battery,
 #pulseaudio,
@@ -63,20 +62,22 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    background: #8785a2;
+    background: linear-gradient(90deg, #fce883, #fc83d6); 
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
-    border: 1px solid #8785A2;
+    color: #383838;
+    /*border: 1px solid #8785A2;*/
 }
 
 #tray {
+    background: linear-gradient(90deg, #fc83d6, #fce883);  
     border-radius: 10px;
     margin-right: 10px;
 }
 
 #workspaces {
-    background: #8785a2;
+    background: linear-gradient(90deg, #fc83d6, #fce883);  
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 0px;
@@ -110,7 +111,7 @@ tooltip {
 }
 
 #clock {
-    color: #F6F6F6;
+    /*color: #F6F6F6;*/
     border-radius: 10px 10px 10px 10px;
     margin-left: 10px;
     border-right: 0px;
@@ -155,16 +156,12 @@ tooltip {
     margin-left: 5px;
     margin-right: 5px;
 }
-#cpu {
-    color: #F6F6F6;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 5px;
-    border-right: 0px;
-}
-#memory {
-    color: #F6F6F6;
-    border-radius: 0px 10px 10px 0px;
-    margin-left: 0px;
-    border-right: 0px;
+
+#hardware {
+    /*background: linear-gradient(45deg, #color1 0%, #color2 100%);
+    color: #F6F6F6;*/ 
+    border-radius: 10px 10px 10px 10px;
     margin-right: 10px;
+    border-right: 0px;
+
 }
