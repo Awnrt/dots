@@ -10,6 +10,7 @@ cp -r nvim /home/$USER/.config
 cp -r waybar /home/$USER/.config
 cp -r wofi /home/$USER/.config
 cp -r .papes /home/$USER
+sudo cp -r Adwaita-dark /usr/share/themes
 
 echo "options hid_apple fnmode=0" > /etc/modprobe.d/hid_apple.conf 
 echo "options nvidia NVreg_RegistryDwords=\"PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3\"" > /etc/modprobe.d/nvidia.conf
@@ -38,4 +39,10 @@ sudo echo "min_freq='4.8GHz'" >> /etc/default/cpupower
 #cd yay
 #makepkg -csi
 
+gsettings set org.gnome.desktop.interface font-name 'JetBrainsMonoNL NF Bold Mono 11'
+gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMonoNL NF Bold Mono 11'
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark"
+
 sudo mkinitcpio -P
+chsh -s $(which fish)
