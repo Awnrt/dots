@@ -24,9 +24,9 @@ mkdir /home/$USER/.local
 mkdir /home/$USER/.local/share
 mkdir /home/$USER/.local/share/themes
 mkdir /home/$USER/.local/share/icons
-cp -r gtk-master .local/share/themes/Dracula
-cp -r Dracula .local/share/icons
-cp -r Dracula-cursors .local/share/icons
+cp -r gtk-master /home/$USER/.local/share/themes/Dracula
+cp -r Dracula /home/$USER/.local/share/icons
+cp -r Dracula-cursors /home/$USER/.local/share/icons
 
 # Uncomment these lines to have yay automatically installed
 #
